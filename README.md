@@ -1,37 +1,23 @@
 # Mgen
 
-TODO: Write a gem description
+mruby gem (mgem) generator
 
-## Installation
+mgen is a ruby cli to generate mruby gem projects
 
-Add this line to your application's Gemfile:
-
-    gem 'mgen'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install mgen
+`$ gem install mgen`
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Tasks:
+  mgen help [TASK]  # Describe available tasks or one specific task
+  mgen info         # information about Mgen.
+  mgen new <name>   # generates a new mgem project.
+```
 
-## Contributing
+the mgem project layout will generate the maximal GEM structure based on mruby standard:
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-
-
-
-
+```
 +- GEM_NAME         <- Name of GEM
    |
    +- include/      <- Header for Ruby extension (will exported)
@@ -45,3 +31,13 @@ TODO: Write usage instructions here
    +- mrbgem.rake   <- GEM Specification
    |
    +- README.md     <- Readme for GEM
+```
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
