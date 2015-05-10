@@ -15,24 +15,25 @@ Tasks:
   mgen new <name>   # generates a new mgem project.
 ```
 
-the mgem project layout will generate the maximal GEM structure based on mruby standard:
+the mgem project will generate the maximal GEM structure based on mruby standard:
 
 ```
-+- GEM_NAME         <- Name of GEM
++- GEM_NAME           <- Name of GEM
    |
-   +- include/      <- Header for Ruby extension (will exported)
+   +- include/        <- Header for Ruby extension (will exported)
    |
-   +- mrblib/       <- Source for Ruby extension
+   +- mrblib/         <- Source for Ruby extension
    |
-   +- src/          <- Source for C extension
+   +- src/            <- Source for C extension
    |
-   +- test/         <- Test code (Ruby)
+   +- test/           <- Test code (Ruby)
    |
-   +- mrbgem.rake   <- GEM Specification
+   +- mrbgem.rake     <- GEM Specification
    |
-   +- README.md     <- Readme for GEM
+   +- build_config.rb <- Build configuration
+   |
+   +- README.md       <- Readme for GEM
 ```
-
 
 ## Contributing
 
