@@ -45,7 +45,7 @@ module Mgen
 
       def create_project_directory
         create_directories( @project_dir )
-        dirs = %w(docs mrblib test include src test).map{|o| "#{@project_dir}/#{o}"}
+        dirs = %w(docs mrblib test include src test bin).map{|o| "#{@project_dir}/#{o}"}
         create_directories(*dirs)
       end
 

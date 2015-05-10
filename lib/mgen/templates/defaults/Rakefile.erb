@@ -14,7 +14,7 @@ end
 desc "compile binary"
 task :compile => :mruby do
   sh "cd #{MRUBY_ROOT} && MRUBY_CONFIG=#{MRUBY_CONFIG} rake all"
-  sh "cp -p #{MRUBY_ROOT}/bin/mruby #{STATIC_ROOT}/bin/static"
+  sh "cp -p #{MRUBY_ROOT}/bin/mruby #{STATIC_ROOT}/bin/<%= app_name %>"
 end
 
 desc "test"
@@ -25,12 +25,12 @@ end
 desc "install"
 task :install => :compile do
   sh "mkdir -p #{INSTALL_PREFIX}/bin"
-  sh "cp -p #{STATIC_ROOT}/bin/static #{INSTALL_PREFIX}/bin/."
+  sh "cp -p #{STATIC_ROOT}/bin/<%= app_name %> #{INSTALL_PREFIX}/bin/."
 end
 
 desc "cleanup"
 task :clean do
-  sh "rm #{STATIC_ROOT}/bin/static"
+  sh "rm #{STATIC_ROOT}/bin/<%= app_name %>"
   sh "cd #{MRUBY_ROOT} && rake deep_clean"
 end
 
