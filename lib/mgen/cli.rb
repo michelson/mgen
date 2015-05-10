@@ -39,6 +39,8 @@ module Mgen
         create_project_directory
         create_with_template("#{@project_dir}/LICENSE", 'defaults/LICENSE', full_app_hash)
         create_with_template("#{@project_dir}/mrbgem.rake", 'defaults/mrbgem.rake', full_app_hash)
+        create_with_template("#{@project_dir}/build_config.rb", 'defaults/build_config.rb', full_app_hash)
+        create_with_template("#{@project_dir}/Rakefile", 'defaults/Rakefile', full_app_hash)
       end
 
       def create_project_directory

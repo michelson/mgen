@@ -2,5 +2,4 @@
 
 require 'mgen'
 
-#require_relative "../lib/mgen.rb"
 Mgen::CLI.start
