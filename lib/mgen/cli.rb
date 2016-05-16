@@ -1,11 +1,10 @@
 require "thor"
 require "thor/group"
-require "pry"
+# require "pry"
 require "erubis"
 
 module Mgen
   class CLI < Thor
-    #binding.pry
     include Utils
     include Thor::Actions
 
